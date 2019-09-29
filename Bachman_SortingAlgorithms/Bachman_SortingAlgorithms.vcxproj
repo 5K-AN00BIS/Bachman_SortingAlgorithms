@@ -132,14 +132,6 @@
     <ClCompile Include="Interface.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="..\..\..\..\Downloads\SortDatasets\num10.dat" />
-    <None Include="..\..\..\..\Downloads\SortDatasets\num100.dat" />
-    <None Include="..\..\..\..\Downloads\SortDatasets\num1000.dat" />
-    <None Include="..\..\..\..\Downloads\SortDatasets\num10000.dat" />
-    <None Include="..\..\..\..\Downloads\SortDatasets\num100000.dat" />
-    <None Include="..\..\..\..\Downloads\SortDatasets\num1000000.dat" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

@@ -13,9 +13,6 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Data Files">
-      <UniqueIdentifier>{5ddf0a2a-45bb-4d8e-9e6c-59d8a42f48f5}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Interface.h">
@@ -38,25 +35,5 @@
     <ClCompile Include="Source.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\..\..\..\Downloads\SortDatasets\num10.dat">
-      <Filter>Data Files</Filter>
-    </None>
-    <None Include="..\..\..\..\Downloads\SortDatasets\num100.dat">
-      <Filter>Data Files</Filter>
-    </None>
-    <None Include="..\..\..\..\Downloads\SortDatasets\num1000.dat">
-      <Filter>Data Files</Filter>
-    </None>
-    <None Include="..\..\..\..\Downloads\SortDatasets\num10000.dat">
-      <Filter>Data Files</Filter>
-    </None>
-    <None Include="..\..\..\..\Downloads\SortDatasets\num100000.dat">
-      <Filter>Data Files</Filter>
-    </None>
-    <None Include="..\..\..\..\Downloads\SortDatasets\num1000000.dat">
-      <Filter>Data Files</Filter>
-    </None>
   </ItemGroup>
 </Project>

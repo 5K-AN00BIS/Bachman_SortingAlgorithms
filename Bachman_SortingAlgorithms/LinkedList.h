@@ -4,6 +4,7 @@
 #pragma once
 #include <iostream>
 #include <stdlib.h>
+#include <fstream> // For file I/O
 #include "Node.h"
 #include "Iterator.h"
 
@@ -142,6 +143,23 @@ public:
 
 		return i;
 	}
+
+	// SORT FUNCTIONS LISTED BELOW
+	// Insertion Sort functions
+	// Inserts a node in a sorted linked list.
+	void sortedInsert(Node<T>** head_ref, Node<T>* newNode);
+	{
+		Node<T>* current;
+
+		// If the list is empty, set head reference to the newNode
+		if (*head_ref == NULL)
+		{
+			*head_ref = newNode;
+		}
+		else if ((*head_ref)
+	}
+
+	// Sorts the singly linked list we have here.
 };
 
 #endif
