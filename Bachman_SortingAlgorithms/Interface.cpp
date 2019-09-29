@@ -1,4 +1,5 @@
 #include <fstream>
+#include <chrono>
 #include "Interface.h"
 
 using namespace std;
@@ -377,10 +378,8 @@ void Interface()
 			// Display a new menu to choose which sort the user will want to use.
 			cout << "Please select what type of sort you want to do below." << endl;
 			cout << "(1) Insertion Sort." << endl;
-			cout << "(2) Merge Sort." << endl;
+			cout << "(2) Bubble Sort." << endl;
 			cout << "(3) Quick Sort." << endl;
-			cout << "(4) Bubble Sort." << endl;
-			cout << "(5) Selection Sort." << endl;
 			cout << "(0) Go back to previous menu." << endl;
 			cout << "\nPlease enter the number corresponding to the action you want to take: ";
 			cin >> menuSelection2;
@@ -397,7 +396,16 @@ void Interface()
 				}
 				else // If not empty, use the LinkedList search function to find out if information has been found in the list.
 				{
-					
+					// Start timer
+					auto start = std::chrono::high_resolution_clock::now();
+					// Run insertion sort.
+					numberList->insertionSort();
+					// End timer
+					auto finish = std::chrono::high_resolution_clock::now();
+					// Calculate the duration
+					std::chrono::duration<double> elapsed = finish - start;
+					// Report back to the user how long it took.
+					cout << "Insertion sort completed. This process took " << elapsed.count() << " seconds." << endl << endl;
 				}
 
 				menuSelection2 = -1;
@@ -413,7 +421,16 @@ void Interface()
 				}
 				else // If not empty, use the LinkedList search function to find out if information has been found in the list.
 				{
-					
+					// Start timer
+					auto start = std::chrono::high_resolution_clock::now();
+					// Run insertion sort.
+					numberList->bubbleSort();
+					// End timer
+					auto finish = std::chrono::high_resolution_clock::now();
+					// Calculate the duration
+					std::chrono::duration<double> elapsed = finish - start;
+					// Report back to the user how long it took.
+					cout << "Insertion sort completed. This process took " << elapsed.count() << " seconds." << endl << endl;
 				}
 
 				menuSelection2 = -1;
@@ -429,39 +446,16 @@ void Interface()
 				}
 				else // If not empty, use the LinkedList search function to find out if information has been found in the list.
 				{
-					
-				}
-
-				menuSelection2 = -1;
-				break;
-			}
-			case 4: // If menuSelection2 is equal to 4, bubble sort.
-			{
-				system("cls");
-				// Check to see if the linked list is empty first.
-				if (numberList->isEmpty())
-				{
-					cout << "There is nothing to search. It's empty! Try adding nodes by using 2 in menu!\n" << endl;
-				}
-				else // If not empty, use the LinkedList search function to find out if information has been found in the list.
-				{
-					
-				}
-
-				menuSelection2 = -1;
-				break;
-			}
-			case 5: // If menuSelection2 is equal to 5, selection sort.
-			{
-				system("cls");
-				// Check to see if the linked list is empty first.
-				if (numberList->isEmpty())
-				{
-					cout << "There is nothing to search. It's empty! Try adding nodes by using 2 in menu!\n" << endl;
-				}
-				else // If not empty, use the LinkedList search function to find out if information has been found in the list.
-				{
-					
+					// Start timer
+					auto start = std::chrono::high_resolution_clock::now();
+					// Run insertion sort.
+					numberList->quickSort();
+					// End timer
+					auto finish = std::chrono::high_resolution_clock::now();
+					// Calculate the duration
+					std::chrono::duration<double> elapsed = finish - start;
+					// Report back to the user how long it took.
+					cout << "Insertion sort completed. This process took " << elapsed.count() << " seconds." << endl << endl;
 				}
 
 				menuSelection2 = -1;

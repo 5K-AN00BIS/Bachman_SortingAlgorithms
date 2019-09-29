@@ -144,22 +144,69 @@ public:
 		return i;
 	}
 
-	// SORT FUNCTIONS LISTED BELOW
-	// Insertion Sort functions
-	// Inserts a node in a sorted linked list.
-	void sortedInsert(Node<T>** head_ref, Node<T>* newNode);
+	// SORT FUNCTIONS BELOW
+	// Insertion Sort
+	void insertionSort()
 	{
-		Node<T>* current;
+		Node<T>* temp = head;
+		Node<T>* currentNode = head->next; // Comparative node.
+		Node<T>* previousNode = head; // Node before the comparative node.
 
-		// If the list is empty, set head reference to the newNode
-		if (*head_ref == NULL)
+		// Return if the linked list is empty.
+		if (isEmpty())
 		{
-			*head_ref = newNode;
+			return; // Do nothing
 		}
-		else if ((*head_ref)
+		
+		// While the current node is not empty (meaning the end).
+		while (currentNode != nullptr)
+		{
+			// If current node is larger or equal to the largest element (in case already sorted)
+			if (previousNode->nodeData <= currentNode->nodeData)
+			{
+				currentNode = currentNode->next; // Set the current node to next value.
+				previousNode = previousNode->next; // Set previous node to what current node was.
+			}
+			else
+			{
+				// If the element is smaller than the head, then the head element needs to be moved.
+				if (head->nodeData > currentNode->nodeData)
+				{
+					previousNode->next = currentNode->next;
+					currentNode->next = head;
+					head = currentNode;
+				}
+				else
+				{
+					temp = head;
+
+					// While loop to run through and make sure everything is sorted.
+					while (temp->next != NULL && temp->next->nodeData < currentNode->nodeData)
+					{
+						temp = temp->next;
+					}
+
+					previousNode->next = currentNode->next;
+					currentNode->next = temp->next;
+					temp->next = currentNode;
+				}
+			}
+
+			currentNode = previousNode->next;
+		}
 	}
 
-	// Sorts the singly linked list we have here.
+	// Bubble Sort
+	void bubbleSort()
+	{
+
+	}
+
+	// Quick Sort
+	void quickSort()
+	{
+
+	}
 };
 
 #endif
